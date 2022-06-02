@@ -13,7 +13,7 @@
       "dom.iterable",
       "esnext"
     ],
-    "module": "ESNext",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
@@ -27,8 +27,8 @@
     "incremental": true,
   },
   "include": [
-    "**/*.ts",
-    "**/*.tsx"
+    "src/**/*.ts",
+    "src/**/*.tsx"
   ],
   "exclude": [
     "node_modules"
