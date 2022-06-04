@@ -21,7 +21,7 @@ npm run check-types ||
   false;
 )
 
-npm run test -- --watch=false ||
+npm run test -- --watch=false --coverage=true ||
 (
   echo 'Tests failed, view the errors above to see why.'
   false;
