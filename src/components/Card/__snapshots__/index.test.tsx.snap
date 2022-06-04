@@ -1,0 +1,36 @@
+// Vitest Snapshot v1
+
+exports[`Card component > should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="bg-white rounded-lg border-gray-500 border py-4 w-full"
+  >
+    <div
+      class="flex items-center gap-4 px-4"
+    >
+      <svg
+        class="text-cyan text-2xl"
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 352 512"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+        />
+      </svg>
+      <h3
+        class="text-2xl text-purple"
+      >
+        Test
+      </h3>
+    </div>
+    <div
+      class="border-b mt-2"
+    />
+  </div>
+</DocumentFragment>
+`;

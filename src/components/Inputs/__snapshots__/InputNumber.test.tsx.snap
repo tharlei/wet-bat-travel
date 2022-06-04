@@ -1,0 +1,39 @@
+// Vitest Snapshot v1
+
+exports[`InputNumber component > should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="flex relative items-center"
+  >
+    <div
+      class="flex flex-col w-full"
+    >
+      <label
+        class="uppercase text-gray-900 text-xs -mb-6 ml-2 z-10"
+      >
+        Test
+      </label>
+      <input
+        class="bg-gray-100 rounded border-0 pt-8 "
+        required=""
+        type="number"
+      />
+    </div>
+    <svg
+      class="text-cyan text-2xl h-full absolute font-bold right-3 bg-gray-100 z-20"
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      stroke-width="0"
+      viewBox="0 0 16 16"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </div>
+</DocumentFragment>
+`;
