@@ -1,0 +1,77 @@
+// Vitest Snapshot v1
+
+exports[`Loading component > should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="flex items-center justify-center"
+  >
+    <svg
+      class="animate-spin font-bold text-2xl text-cyan text-center"
+      fill="none"
+      height="1em"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <desc />
+      <path
+        d="M0 0h24v24H0z"
+        fill="none"
+        stroke="none"
+      />
+      <line
+        x1="12"
+        x2="12"
+        y1="6"
+        y2="3"
+      />
+      <line
+        x1="16.25"
+        x2="18.4"
+        y1="7.75"
+        y2="5.6"
+      />
+      <line
+        x1="18"
+        x2="21"
+        y1="12"
+        y2="12"
+      />
+      <line
+        x1="16.25"
+        x2="18.4"
+        y1="16.25"
+        y2="18.4"
+      />
+      <line
+        x1="12"
+        x2="12"
+        y1="18"
+        y2="21"
+      />
+      <line
+        x1="7.75"
+        x2="5.6"
+        y1="16.25"
+        y2="18.4"
+      />
+      <line
+        x1="6"
+        x2="3"
+        y1="12"
+        y2="12"
+      />
+      <line
+        x1="7.75"
+        x2="5.6"
+        y1="7.75"
+        y2="5.6"
+      />
+    </svg>
+  </div>
+</DocumentFragment>
+`;
