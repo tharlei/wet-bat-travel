@@ -1,0 +1,136 @@
+// Vitest Snapshot v1
+
+exports[`FormQuote component > should match snapshot 1`] = `
+<DocumentFragment>
+  <form
+    class="px-4 lg:px-8 mt-8 flex flex-col gap-8"
+  >
+    <div
+      class="grid lg:grid-cols-2 gap-8"
+    >
+      <div
+        class="flex flex-col"
+      >
+        <label
+          class="uppercase text-gray-900 text-xs -mb-6 ml-2 z-10"
+        >
+          From
+        </label>
+        <input
+          class="bg-gray-100 rounded border-0 pt-8 "
+          required=""
+          type="text"
+        />
+      </div>
+      <div
+        class="flex flex-col"
+      >
+        <label
+          class="uppercase text-gray-900 text-xs -mb-6 ml-2 z-10"
+        >
+          Destination
+        </label>
+        <input
+          class="bg-gray-100 rounded border-0 pt-8 "
+          required=""
+          type="text"
+        />
+      </div>
+    </div>
+    <div
+      class="grid lg:grid-cols-2 gap-8"
+    >
+      <div
+        class="flex flex-col"
+      >
+        <label
+          class="uppercase text-gray-900 text-xs -mb-6 ml-2 z-10"
+        >
+          Depart Date
+        </label>
+        <input
+          class="bg-gray-100 rounded border-0 pt-8 w-full"
+          required=""
+          type="date"
+        />
+      </div>
+      <div
+        class="flex flex-col"
+      >
+        <label
+          class="uppercase text-gray-900 text-xs -mb-6 ml-2 z-10"
+        >
+          Reture Date
+        </label>
+        <input
+          class="bg-gray-100 rounded border-0 pt-8 w-full"
+          required=""
+          type="date"
+        />
+      </div>
+    </div>
+    <div
+      class="grid lg:grid-cols-2 gap-8"
+    >
+      <div
+        class="flex relative items-center"
+      >
+        <div
+          class="flex flex-col w-full"
+        >
+          <label
+            class="uppercase text-gray-900 text-xs -mb-6 ml-2 z-10"
+          >
+            People
+          </label>
+          <input
+            class="bg-gray-100 rounded border-0 pt-8 "
+            min="1"
+            required=""
+            type="number"
+          />
+        </div>
+        <svg
+          class="text-cyan text-2xl h-full absolute font-bold right-3 bg-gray-100 z-20"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 16 16"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+      <select />
+    </div>
+    <div
+      class="grid lg:grid-cols-2 gap-8"
+    >
+      <div
+        class="flex flex-col"
+      >
+        <label
+          class="uppercase text-gray-900 text-xs -mb-6 ml-2 z-10"
+        >
+          Name
+        </label>
+        <input
+          class="bg-gray-100 rounded border-0 pt-8 "
+          required=""
+          type="text"
+        />
+      </div>
+      <button
+        class="p-4 bg-cyan rounded-full text-white text-xl hover:bg-opacity-80 transition-all duration-300"
+      >
+        Create a quote
+      </button>
+    </div>
+  </form>
+</DocumentFragment>
+`;

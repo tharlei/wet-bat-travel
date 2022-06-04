@@ -5,28 +5,32 @@ echo 'Styling, testing and building your project before committing'
 
 npm run check-format ||
 (
-  echo 'Prettier Check Failed. Run npm run format, add changes and try commit again.';
+  echo 'Prettier check failed. Run npm run format, add changes and try commit again.';
   false;
 )
 
 npm run check-lint ||
 (
-  echo 'ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.'
+  echo 'ESLint check failed. Make the required changes listed above, add changes and try to commit again.'
   false;
 )
 
 npm run check-types ||
 (
-  echo 'Are you seriously trying to write that? Make the changes required above.'
+  echo 'Types errors. Make the changes required above.'
   false;
 )
 
-echo 'Code looks good to me, trying to build now.'
+npm run test -- --watch=false --coverage=true ||
+(
+  echo 'Tests failed, view the errors above to see why.'
+  false;
+)
 
 npm run build ||
 (
-  echo 'Next build failed: View the errors above to see why.'
+  echo 'Build failed: view the errors above to see why.'
   false;
 )
 
-echo 'Ccommitting this now. 🚀'
+echo 'Committing this now. 🚀'

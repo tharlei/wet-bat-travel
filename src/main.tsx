@@ -1,11 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { Routes, BrowserRouter, Route } from 'react-router-dom';
+import { Dashboard } from './layouts/Dashboard';
 import { Home } from './pages/Home';
 import './global.scss';
 
-// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <Home />
-  </React.StrictMode>,
+const root = createRoot(document.getElementById('root') as HTMLElement);
+
+root.render(
+  <StrictMode>
+    <BrowserRouter>
+      <Dashboard>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Dashboard>
+    </BrowserRouter>
+  </StrictMode>,
 );
