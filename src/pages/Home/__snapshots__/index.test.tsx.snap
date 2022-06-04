@@ -1,0 +1,234 @@
+// Vitest Snapshot v1
+
+exports[`Home page > should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="grid lg:grid-cols-2 2xl:grid-cols-3 mt-4 w-full"
+  >
+    <div
+      class="bg-white rounded-lg border-gray-500 border py-4 w-full"
+    >
+      <div
+        class="flex items-center gap-4 px-4"
+      >
+        <svg
+          class="text-cyan text-2xl"
+          fill="none"
+          height="1em"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <desc />
+          <path
+            d="M0 0h24v24H0z"
+            fill="none"
+            stroke="none"
+          />
+          <path
+            d="M3 5v14l8 -7z"
+          />
+          <path
+            d="M14 5v14l8 -7z"
+          />
+        </svg>
+        <h3
+          class="text-2xl text-purple"
+        >
+          Quick quote
+        </h3>
+      </div>
+      <div
+        class="border-b mt-2"
+      />
+      <form
+        class="px-4 lg:px-8 mt-8 flex flex-col gap-8"
+      >
+        <div
+          class="grid lg:grid-cols-2 gap-8"
+        >
+          <div
+            class="flex flex-col"
+          >
+            <label
+              class="uppercase text-gray-900 text-xs -mb-6 ml-2 z-10"
+            >
+              From
+            </label>
+            <input
+              class="bg-gray-100 rounded border-0 pt-8 "
+              required=""
+              type="text"
+            />
+          </div>
+          <div
+            class="flex flex-col"
+          >
+            <label
+              class="uppercase text-gray-900 text-xs -mb-6 ml-2 z-10"
+            >
+              Destination
+            </label>
+            <input
+              class="bg-gray-100 rounded border-0 pt-8 "
+              required=""
+              type="text"
+            />
+          </div>
+        </div>
+        <div
+          class="grid lg:grid-cols-2 gap-8"
+        >
+          <div
+            class="flex flex-col"
+          >
+            <label
+              class="uppercase text-gray-900 text-xs -mb-6 ml-2 z-10"
+            >
+              Depart Date
+            </label>
+            <input
+              class="bg-gray-100 rounded border-0 pt-8 w-full"
+              required=""
+              type="date"
+            />
+          </div>
+          <div
+            class="flex flex-col"
+          >
+            <label
+              class="uppercase text-gray-900 text-xs -mb-6 ml-2 z-10"
+            >
+              Reture Date
+            </label>
+            <input
+              class="bg-gray-100 rounded border-0 pt-8 w-full"
+              required=""
+              type="date"
+            />
+          </div>
+        </div>
+        <div
+          class="grid lg:grid-cols-2 gap-8"
+        >
+          <div
+            class="flex relative items-center"
+          >
+            <div
+              class="flex flex-col w-full"
+            >
+              <label
+                class="uppercase text-gray-900 text-xs -mb-6 ml-2 z-10"
+              >
+                People
+              </label>
+              <input
+                class="bg-gray-100 rounded border-0 pt-8 "
+                min="1"
+                required=""
+                type="number"
+              />
+            </div>
+            <svg
+              class="text-cyan text-2xl h-full absolute font-bold right-3 bg-gray-100 z-20"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 16 16"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div
+            class="flex relative items-center"
+          >
+            <div
+              class="flex flex-col w-full"
+            >
+              <label
+                class="uppercase text-gray-900 text-xs -mb-6 ml-2 z-10"
+              >
+                Transporation
+              </label>
+              <select
+                class="bg-gray-100 rounded border-0 pt-8"
+                required=""
+              >
+                <option />
+                <option
+                  value="ea4fac1f-9d46-4ba9-a58d-701b8b9dfe99"
+                >
+                  Rental car
+                </option>
+                <option
+                  value="48dd55bb-a3a2-4cfe-8f7c-e8f61bb953da"
+                >
+                  Bicycle
+                </option>
+                <option
+                  value="0f253543-02b3-4d8e-9dcd-f9283a07c57f"
+                >
+                  Boat
+                </option>
+                <option
+                  value="9b33c564-ffe8-4d2a-8da2-654089cf1766"
+                >
+                  Train
+                </option>
+              </select>
+            </div>
+            <svg
+              class="text-cyan text-2xl h-full absolute font-bold right-3 bg-gray-100 z-20"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 16 16"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="grid lg:grid-cols-2 gap-8"
+        >
+          <div
+            class="flex flex-col"
+          >
+            <label
+              class="uppercase text-gray-900 text-xs -mb-6 ml-2 z-10"
+            >
+              Name
+            </label>
+            <input
+              class="bg-gray-100 rounded border-0 pt-8 "
+              required=""
+              type="text"
+            />
+          </div>
+          <button
+            class="p-4 bg-cyan rounded-full text-white text-xl hover:bg-opacity-80 transition-all duration-300"
+          >
+            Create a quote
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;
