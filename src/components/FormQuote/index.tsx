@@ -6,14 +6,15 @@ import { InputText } from '../../components/Inputs/InputText';
 import { Loading } from '../Loading';
 import { CreateQuoteService } from '../../services/CreateQuoteService';
 import { ListTransportOptionsService } from '../../services/ListTransportOptionsService';
+import cogoToast from 'cogo-toast';
 
 export function FormQuote() {
   const [from, setFrom] = useState<string>('');
   const [destination, setDestination] = useState<string>('');
   const [departDate, setDepartDate] = useState<string>('');
   const [retureDate, setRetureDate] = useState<string>('');
-  const [people, setPeople] = useState<number>(1);
-  const [transportationId, setTransportationId] = useState<string>('');
+  const [amountPeople, setAmountPeople] = useState<number>(1);
+  const [transportId, setTransportId] = useState<string>('');
   const [name, setName] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
   const [transportOptions, setTransportOptions] = useState<OptionData[]>([]);
@@ -27,8 +28,8 @@ export function FormQuote() {
     setTransportOptions(options);
   }
 
-  async function handleSubmitCreateQuote(e: FormEvent) {
-    e.preventDefault();
+  async function handleSubmitCreateQuote(event: FormEvent): Promise<void> {
+    event.preventDefault();
     setLoading(true);
 
     const quote = {
@@ -36,12 +37,25 @@ export function FormQuote() {
       destination,
       departDate,
       retureDate,
-      people,
-      transportationId,
+      amountPeople,
+      transportId,
       name,
     };
 
-    await new CreateQuoteService().handle(quote);
+    try {
+      await new CreateQuoteService().handle(quote);
+      cogoToast.success('Quote created success!', {
+        position: 'bottom-center',
+      });
+
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      //@ts-expect-error
+      event.target.reset();
+    } catch (error) {
+      cogoToast.error('Please, check data filled', {
+        position: 'bottom-center',
+      });
+    }
 
     setLoading(false);
   }
@@ -60,11 +74,11 @@ export function FormQuote() {
         <InputDate label="Reture Date" setValue={setRetureDate} />
       </div>
       <div className="grid lg:grid-cols-2 gap-8">
-        <InputNumber label="People" min={1} setValue={setPeople} />
+        <InputNumber label="People" min={1} setValue={setAmountPeople} />
         <InputEnum
           label="Transporation"
           options={transportOptions}
-          setValue={setTransportationId}
+          setValue={setTransportId}
         />
       </div>
       <div className="grid lg:grid-cols-2 gap-8">
