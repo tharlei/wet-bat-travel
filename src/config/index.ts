@@ -1,3 +1,9 @@
-const { VITE_API_URL } = import.meta.env;
+const envs = ['API_URL', 'API_TOKEN'];
 
-export { VITE_API_URL };
+const { API_URL, API_TOKEN } = envs
+  .map((env) => {
+    return { [env]: import.meta.env[`VITE_${env}`] as string };
+  })
+  .reduce((a, k) => ({ ...a, ...k }), {});
+
+export { API_URL, API_TOKEN };
