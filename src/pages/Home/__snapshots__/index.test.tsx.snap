@@ -165,26 +165,6 @@ exports[`Home page > should match snapshot 1`] = `
                 required=""
               >
                 <option />
-                <option
-                  value="ea4fac1f-9d46-4ba9-a58d-701b8b9dfe99"
-                >
-                  Rental car
-                </option>
-                <option
-                  value="48dd55bb-a3a2-4cfe-8f7c-e8f61bb953da"
-                >
-                  Bicycle
-                </option>
-                <option
-                  value="0f253543-02b3-4d8e-9dcd-f9283a07c57f"
-                >
-                  Boat
-                </option>
-                <option
-                  value="9b33c564-ffe8-4d2a-8da2-654089cf1766"
-                >
-                  Train
-                </option>
               </select>
             </div>
             <svg

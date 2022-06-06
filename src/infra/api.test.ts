@@ -3,7 +3,8 @@ import AxiosInstace from 'axios';
 import { describe, expect, it, vi } from 'vitest';
 
 vi.mock('../config', () => ({
-  VITE_API_URL: 'url',
+  API_URL: 'url',
+  API_TOKEN: '123',
 }));
 
 describe('API test', () => {
