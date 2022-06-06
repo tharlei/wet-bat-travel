@@ -20,7 +20,7 @@ export function FormQuote() {
 
   useEffect(() => {
     getTransports();
-  });
+  }, []);
 
   async function getTransports(): Promise<void> {
     const options = await new ListTransportOptionsService().handle();
