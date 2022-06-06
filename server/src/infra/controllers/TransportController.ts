@@ -5,7 +5,7 @@ export class TransportController {
   private readonly listTransportQuery: ListTransportQuery =
     new ListTransportQuery();
 
-  index = async (request: Request, response: Response): Promise<Response> => {
+  index = async (_request: Request, response: Response): Promise<Response> => {
     try {
       const data = await this.listTransportQuery.handle();
       return response.status(200).json(data);
