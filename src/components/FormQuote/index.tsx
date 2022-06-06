@@ -1,30 +1,11 @@
-import { FormEvent, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 import { InputDate } from '../../components/Inputs/InputDate';
-import { InputEnum } from '../../components/Inputs/InputEnum';
+import { InputEnum, OptionData } from '../../components/Inputs/InputEnum';
 import { InputNumber } from '../../components/Inputs/InputNumber';
 import { InputText } from '../../components/Inputs/InputText';
 import { Loading } from '../Loading';
-import cogoToast from 'cogo-toast';
-import { CreateQuoteService } from '../../services/createQuoteService';
-
-const TRANSPORATIONS = [
-  {
-    value: 'ea4fac1f-9d46-4ba9-a58d-701b8b9dfe99',
-    title: 'Rental car',
-  },
-  {
-    value: '48dd55bb-a3a2-4cfe-8f7c-e8f61bb953da',
-    title: 'Bicycle',
-  },
-  {
-    value: '0f253543-02b3-4d8e-9dcd-f9283a07c57f',
-    title: 'Boat',
-  },
-  {
-    value: '9b33c564-ffe8-4d2a-8da2-654089cf1766',
-    title: 'Train',
-  },
-];
+import { CreateQuoteService } from '../../services/CreateQuoteService';
+import { ListTransportOptionsService } from '../../services/ListTransportOptionsService';
 
 export function FormQuote() {
   const [from, setFrom] = useState<string>('');
@@ -35,11 +16,21 @@ export function FormQuote() {
   const [transportationId, setTransportationId] = useState<string>('');
   const [name, setName] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
+  const [transports, setTransports] = useState<OptionData[]>([]);
+
+  useEffect(() => {
+    getTransports();
+  });
+
+  async function getTransports(): Promise<void> {
+    const transports = await new ListTransportOptionsService().handle();
+    setTransports(transports);
+  }
 
   async function handleSubmitCreateQuote(e: FormEvent) {
     e.preventDefault();
-
     setLoading(true);
+
     const quote = {
       from,
       destination,
@@ -50,16 +41,7 @@ export function FormQuote() {
       name,
     };
 
-    try {
-      await new CreateQuoteService().handle(quote);
-      cogoToast.success('Quote created success!', {
-        position: 'bottom-center',
-      });
-    } catch (error) {
-      cogoToast.error('Please, try again later...', {
-        position: 'bottom-center',
-      });
-    }
+    await new CreateQuoteService().handle(quote);
 
     setLoading(false);
   }
@@ -81,7 +63,7 @@ export function FormQuote() {
         <InputNumber label="People" min={1} setValue={setPeople} />
         <InputEnum
           label="Transporation"
-          options={TRANSPORATIONS}
+          options={transports}
           setValue={setTransportationId}
         />
       </div>
