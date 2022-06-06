@@ -26,9 +26,13 @@
 
 :small_blue_diamond: [Technologies used](#technologies-used)
 
+:small_blue_diamond: [Structure decisions](#structure-decisions)
+
 :small_blue_diamond: [Author](#author)
 
 :small_blue_diamond: [License](#license)
+
+
 
 
 ## Description
@@ -115,6 +119,14 @@ npm run dev
 - [Node.js](https://nodejs.org/en/)
 - [Express](https://expressjs.com/)
 - [TailwindCSS](https://tailwindcss.com/)
+
+## Structure decisions
+
+- Folder "infra" has classes that are externally dependent on something. (library, route, bank connection)
+- Folder "repository" is responsible for handling database data.
+- Folder "queries" is intended to return data already mapped from the database.
+- Folder "services" it aims to execute some logic before sending to external dependency.
+
 
 ## Author
 
