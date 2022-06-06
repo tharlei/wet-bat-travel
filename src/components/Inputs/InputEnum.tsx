@@ -1,12 +1,14 @@
 import { BsChevronDown } from 'react-icons/bs';
 
+export interface OptionData {
+  value: string;
+  label: string;
+}
+
 interface InputEnumProps {
   label: string;
   setValue: (value: string) => void;
-  options: {
-    value: string;
-    title: string;
-  }[];
+  options: OptionData[];
 }
 
 export function InputEnum({ label, options, setValue }: InputEnumProps) {
@@ -24,7 +26,7 @@ export function InputEnum({ label, options, setValue }: InputEnumProps) {
           <option></option>
           {options.map((option) => (
             <option key={option.value} value={option.value}>
-              {option.title}
+              {option.label}
             </option>
           ))}
         </select>
