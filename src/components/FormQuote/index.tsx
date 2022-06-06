@@ -16,15 +16,15 @@ export function FormQuote() {
   const [transportationId, setTransportationId] = useState<string>('');
   const [name, setName] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
-  const [transports, setTransports] = useState<OptionData[]>([]);
+  const [transportOptions, setTransportOptions] = useState<OptionData[]>([]);
 
   useEffect(() => {
     getTransports();
   });
 
   async function getTransports(): Promise<void> {
-    const transports = await new ListTransportOptionsService().handle();
-    setTransports(transports);
+    const options = await new ListTransportOptionsService().handle();
+    setTransportOptions(options);
   }
 
   async function handleSubmitCreateQuote(e: FormEvent) {
@@ -63,7 +63,7 @@ export function FormQuote() {
         <InputNumber label="People" min={1} setValue={setPeople} />
         <InputEnum
           label="Transporation"
-          options={transports}
+          options={transportOptions}
           setValue={setTransportationId}
         />
       </div>
