@@ -1,5 +1,6 @@
 import { AxiosInstance } from 'axios';
 import { API } from '../infra/api';
+import cogoToast from 'cogo-toast';
 
 interface CreateQuoteServiceInput {
   from: string;
@@ -19,6 +20,15 @@ export class CreateQuoteService {
   }
 
   public async handle(input: CreateQuoteServiceInput) {
-    await this.api.post('/quotes', input);
+    try {
+      await this.api.post('/quotes', input);
+      cogoToast.success('Quote created success!', {
+        position: 'bottom-center',
+      });
+    } catch (error) {
+      cogoToast.error('Please, try again later to create quote :(', {
+        position: 'bottom-center',
+      });
+    }
   }
 }
